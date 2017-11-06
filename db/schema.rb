@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103174939) do
+ActiveRecord::Schema.define(version: 20171106061519) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string "department"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -43,6 +49,12 @@ ActiveRecord::Schema.define(version: 20171103174939) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "external_key"
+  end
+
+  create_table "contributors", force: :cascade do |t|
+    t.string "department"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "curation_concerns_operations", force: :cascade do |t|

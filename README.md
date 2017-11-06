@@ -1,24 +1,8 @@
-# README
+# Using ApplicationRecord and Attributes API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Refactor the following models to use ApplicationRecord and the Attributes API
 
-Things you may want to cover:
+  - Admin
+  - User
+  - Contributor
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
