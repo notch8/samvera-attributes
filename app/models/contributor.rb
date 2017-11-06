@@ -1,8 +1,2 @@
-class Contributor < ActiveRecord::Base
-  after_initialize :set_default_department
-  private
-  def set_default_department
-    self.department = "Digital Library"
-  end
-
+class Contributor < ApplicationRecord
 end

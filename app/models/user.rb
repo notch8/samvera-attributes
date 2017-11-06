@@ -1,11 +1,10 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # Connects this user object to Hydra behaviors.
   include Hydra::User
   # Connects this user object to Hyrax behaviors.
   include Hyrax::User
   include Hyrax::UserUsageStats
 
-  after_initialize :set_default_department
 
   if Blacklight::Utils.needs_attr_accessible?
     attr_accessible :email, :password, :password_confirmation
@@ -24,8 +23,4 @@ class User < ActiveRecord::Base
     email
   end
 
-  private
-  def set_default_department
-    self.department = "Digital Library"
-  end
 end
